@@ -1,12 +1,12 @@
-import { Component, HostBinding, OnInit, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 import { Article } from './article.model';
 
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.scss']
+  styleUrls: ['./article.component.scss'],
 })
-export class ArticleComponent  {
+export class ArticleComponent {
   // By using the @HostBinding decorator, we’re able to configure our host element from within the component.
   @HostBinding('attr.class') cssClass = '';
   @Input() article!: Article;
@@ -22,11 +22,10 @@ export class ArticleComponent  {
   voteUp(): boolean {
     this.article.voteUp();
     return false;
-    }
+  }
 
   voteDown(): boolean {
     this.article.voteDown();
     return false;
   }
-
 }
