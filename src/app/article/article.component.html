@@ -1,30 +1,39 @@
 <div class="border rounded overflow-hidden my-3">
-<div class="row">
+  <div class="row">
     <div class="col-3">
-        <div class="d-flex flex-column justify-content-center text-center bg-light h-100">
-            <div>{{article.votes}}</div>
-            <div class="text-uppercase">Points</div>
-        </div>
+      <div
+        class="
+          d-flex
+          flex-column
+          justify-content-center
+          text-center
+          bg-light
+          h-100
+        "
+      >
+        <div>{{ article.votes }}</div>
+        <div class="text-uppercase">Points</div>
+      </div>
     </div>
     <div class="col-9">
-        <div class="d-flex flex-column mt-3">
-            <a href={{article.link}}>{{article.title}}</a>
-            <div class="text-muted">({{ article.domain() }})</div>
-            <ul class="list-inline my-3">
-                <li class="list-inline-item">
-                    <a (click)="voteUp()" class="btn" href>
-                        <i class="bi bi-arrow-up-circle-fill"></i>
-                        upvote
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a (click)="voteDown()" class="btn" href>
-                        <i class="bi bi-arrow-down-circle-fill"></i>
-                        downvote
-                    </a>
-                </li>
-            </ul>
-        </div>
+      <div class="d-flex flex-column mt-3">
+        <a href="{{ article.link }}">{{ article.title }}</a>
+        <div class="text-muted">({{ article.domain() }})</div>
+        <ul class="list-inline my-3">
+          <li class="list-inline-item">
+            <a (click)="voteUp()" class="btn" href>
+              <i class="bi bi-arrow-up-circle-fill"></i>
+              upvote
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a (click)="voteDown()" class="btn" href>
+              <i class="bi bi-arrow-down-circle-fill"></i>
+              downvote
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-</div>
+  </div>
 </div>

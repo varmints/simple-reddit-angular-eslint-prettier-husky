@@ -1,7 +1,10 @@
 <div class="row">
   <div class="col-6">
-  <app-article *ngFor="let article of sortedArticles()" [article]="article" ></app-article>
-</div>
+    <app-article
+      *ngFor="let article of sortedArticles()"
+      [article]="article"
+    ></app-article>
+  </div>
   <div class="col-6">
     <div class="card my-3">
       <div class="card-header">Add a link</div>
